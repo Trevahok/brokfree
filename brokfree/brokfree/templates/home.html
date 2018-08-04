@@ -1,0 +1,10 @@
+{% extends "header.html" %}
+{% block content %}
+{% if user.is_authenticated %}
+<p>
+    hello there,{{user.username}}
+
+</p>
+{% endif %}
+
+{% endblock %}
