@@ -23,7 +23,8 @@ import registration.urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('' , include(registration.urls)),
-    path('home/', views.home,name = 'home')
+    path('home/', views.home,name = 'home'),
+    path('posts/', include('blogs.urls'))
 
 ]
 

@@ -1,0 +1,15 @@
+{% extends 'header.html' %}
+
+{% block content %}
+<center>
+    
+{% for post in posts %}
+    <div class = 'w3-card' style ='width: 80% ;'>
+        <p> {{post.user.username }}</p>
+        <p> {{post.desc }}</p>
+        <p>{{ post.content }}</p>
+    </div>
+{% endfor %}
+</center>
+
+{% endblock %}
