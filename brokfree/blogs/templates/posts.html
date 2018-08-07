@@ -1,13 +1,17 @@
 {% extends 'header.html' %}
+{% load comments %}
 
 {% block content %}
 <center>
     
 {% for post in posts %}
-    <div class = 'w3-card' style ='width: 80% ;'>
+    <div class = 'w3-card' style ='width: 87% ;'>
         <p> {{post.user.username }}</p>
         <p> {{post.desc }}</p>
         <p>{{ post.content }}</p>
+    </div>
+    <div class = 'w3-card' style ='width: 87% ;'>
+        {% render_comment_list for post %}
     </div>
 {% endfor %}
 </center>

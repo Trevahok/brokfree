@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'brokfree',
     'blogs',
     'registration',
+    'django.contrib.sites',
+    'django_comments',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +129,4 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = 'media'
 MEDIA_URL = '/media/'
+SITE_ID = 2

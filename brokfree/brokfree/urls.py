@@ -24,7 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('' , include(registration.urls)),
     path('home/', views.home,name = 'home'),
-    path('posts/', include('blogs.urls'))
+    path('posts/', include('blogs.urls')),
+    path('comments/', include('django_comments.urls')),
 
 ]
 
