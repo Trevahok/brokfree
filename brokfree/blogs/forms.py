@@ -1,8 +1,8 @@
 from .models import Post
-from django import forms
+from django.forms import ModelForm
 
-class BlogForm(forms.Form):
+class BlogForm(ModelForm):
     class Meta:
         model = Post
-        exclude = '__all__'
-        fields = ['desc' , 'content' ,'likes' ,'bhk']
+        fields = '__all__'
+        exclude = [ 'user', 'likes']
